@@ -17,6 +17,7 @@
             <input type="text" id="Correo" class="controls" name="Correo" placeholder="Correo"/>
             <input type="text" id="User" class="controls" name="Usuario" placeholder="Usuario"/>
             <input type="password" id="password" class="controls" name="password" placeholder="Contraseña"/>
+            <input type="text" id="tipoUser" class="controls" name="TipoUsuario" placeholder="Tipo de Usuario"/>
             <input type="submit" class="buttons" value="Registrarse"/>
             <p><a href="Login.aspx">¿Ya tienes cuenta? Inicia Sesión</a></p>
     </section>

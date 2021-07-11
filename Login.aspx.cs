@@ -17,7 +17,7 @@ namespace BeeWork
 
         }
 
-        protected void btnIngresar_Click (object sender, EventArgs e)
+        protected void btnIngresar_Click(object sender, EventArgs e)
         {
             string conectar = ConfigurationManager.ConnectionStrings["conexion"].ConnectionString;
             SqlConnection sqlconectar = new SqlConnection(conectar);
@@ -26,9 +26,57 @@ namespace BeeWork
                 CommandType = CommandType.StoredProcedure
             };
             cmd.Connection.Open();
-            cmd.Parameters.Add("@Username", SqlDbType.VarChar, 50).Value = txtUser.text;
+            cmd.Parameters.Add("@Username", SqlDbType.VarChar, 25).Value = txtUsername.Text;
+            cmd.Parameters.Add("@Contraseña", SqlDbType.VarChar, 50).Value = txtPassword.Text;
+            if(rbtnAdmin.Checked == true)
+            {
+                cmd.Parameters.Add("@TipoUsuario", SqlDbType.VarChar, 20).Value = rbtnAdmin.Text;
+            }
+            else
+            {
+                cmd.Parameters.Add("@TipoUsuario", SqlDbType.VarChar, 20).Value = rbtnUser.Text;
+            }
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                if(rbtnAdmin.Text == "Administrador")
+                {
+                    Response.Redirect("IndexAdmin.aspx");
+                    //Response.Redirect("Index.aspx");
+                    
+                }
+                else
+                {
+                    Response.Redirect("Index.aspx");
+                }
+            }
+            else
+            {
+                lblError.Text = "Usuario o Contraseña  incorrecta ";
 
+            }
+            cmd.Connection.Close();
         }
+
+        //string conectar = ConfigurationManager.ConnectionStrings["conexion"].ConnectionString;
+        //SqlConnection sqlconectar = new SqlConnection(conectar);
+        //SqlCommand cmd = new SqlCommand("SP_ValidarUsuario", sqlconectar)
+        //{
+        //    CommandType = CommandType.StoredProcedure
+        //};
+        //cmd.Connection.Open();
+        //    cmd.Parameters.Add("@Username", SqlDbType.VarChar, 25).Value = txtUsername.Text;
+        //    cmd.Parameters.Add("@Contraseña", SqlDbType.VarChar, 50).Value = txtPassword.Text;
+        //    SqlDataReader dr = cmd.ExecuteReader();
+        //    if(dr.Read())
+        //    {
+        //        Response.Redirect("Index.aspx");
+        //    }
+        //    else
+        //    {
+        //        lblError.Text = "Usuario o Contraseña incorrecta";
+        //    }
+        //cmd.Connection.Close();
 
     }
 }
