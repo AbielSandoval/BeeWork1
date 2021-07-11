@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -13,5 +16,19 @@ namespace BeeWork
         {
 
         }
+
+        protected void btnIngresar_Click (object sender, EventArgs e)
+        {
+            string conectar = ConfigurationManager.ConnectionStrings["conexion"].ConnectionString;
+            SqlConnection sqlconectar = new SqlConnection(conectar);
+            SqlCommand cmd = new SqlCommand("SP_ValidarUsuario", sqlconectar)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            cmd.Connection.Open();
+            cmd.Parameters.Add("@Username", SqlDbType.VarChar, 50).Value = txtUser.text;
+
+        }
+
     }
 }

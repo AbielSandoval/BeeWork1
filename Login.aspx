@@ -12,10 +12,17 @@
     <form id="form1" runat="server">
         <section class="form-login">
             <h5>Ingresar</h5>
-            <input type="text" id="User" class="controls" name="Usuario" placeholder="Usuario"/>
+            <div>
+                <asp:Texbox ID="txtUsername class="controls" name="Usuario" placeholder="Usuario" />
+                <%--<input type="text" id="username" class="controls" name="Usuario" placeholder="Usuario"/>--%>
+                <input type="password" id="password" class="controls" name="password" placeholder="Contraseña"/>
+                <input id="btnIngresar" type="submit" class="buttons" value="Ingresar" onclick="btnIngresar_Click"/>
+                <p><a href="SignUp.aspx">¿No tienes cuenta? Registrate</a></p>
+            </div>
+            <%--<input type="text" id="username" class="controls" name="Usuario" placeholder="Usuario"/>
             <input type="password" id="password" class="controls" name="password" placeholder="Contraseña"/>
-            <input type="submit" class="buttons" value="Ingresar"/>
-            <p><a href="SignUp.aspx">¿No tienes cuenta? Registrate</a></p>
+            <input id="btnIngresar" type="submit" class="buttons" value="Ingresar" onclick="btnIngresar_Click"/>
+            <p><a href="SignUp.aspx">¿No tienes cuenta? Registrate</a></p>--%>
         </section>
     </form>
 </body>
