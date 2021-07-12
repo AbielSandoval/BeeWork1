@@ -28,7 +28,7 @@ namespace BeeWork
             cmd.Connection.Open();
             cmd.Parameters.Add("@Username", SqlDbType.VarChar, 25).Value = txtUsername.Text;
             cmd.Parameters.Add("@Contraseña", SqlDbType.VarChar, 50).Value = txtPassword.Text;
-            if(rbtnAdmin.Checked == true)
+            if (rbtnAdmin.Checked == true)
             {
                 cmd.Parameters.Add("@TipoUsuario", SqlDbType.VarChar, 20).Value = rbtnAdmin.Text;
             }
@@ -36,23 +36,32 @@ namespace BeeWork
             {
                 cmd.Parameters.Add("@TipoUsuario", SqlDbType.VarChar, 20).Value = rbtnUser.Text;
             }
-            SqlDataReader dr = cmd.ExecuteReader();
-            if (dr.Read())
+            using (SqlDataReader dr = cmd.ExecuteReader())
             {
-                if(rbtnAdmin.Text == "Administrador")
+                if (dr.Read())
                 {
-                    Response.Redirect("IndexAdmin.aspx");
-                    //Response.Redirect("Index.aspx");
-                    
+                    if (rbtnAdmin.Text == "Administrador")
+                    {
+                        Response.Redirect("IndexAdmin.aspx");
+                        //Response.Redirect("Index.aspx");
+
+                    }
+                    else
+                    {
+                        if (rbtnUser.Text == "Usuario")
+                        {
+                            Response.Redirect("Index.aspx");
+                            //Response.Redirect("IndexAdmin.aspx");
+                        }
+
+                    }
                 }
                 else
                 {
-                    Response.Redirect("Index.aspx");
+                    lblError.Text = "Usuario o Contraseña  incorrecta ";
+
                 }
-            }
-            else
-            {
-                lblError.Text = "Usuario o Contraseña  incorrecta ";
+
 
             }
             cmd.Connection.Close();

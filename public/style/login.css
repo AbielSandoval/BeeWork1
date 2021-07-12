@@ -15,7 +15,7 @@ body {
 
 .form-login {
     width: 400px;
-    height: 380px;
+    height: auto;
     background: #4e4d4d;
     margin: auto;
     margin-top: 25px;
