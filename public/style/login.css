@@ -64,6 +64,7 @@ body {
 .rbtn {
     margin-top: 16px;
     margin-bottom: 16px;
+    cursor: pointer;
 }
 
 .lblError {
@@ -78,6 +79,7 @@ body {
     color: white;
     margin-bottom: 16px;
     margin-top: 16px;
+    cursor: pointer;
 }
 
 .form-login p {

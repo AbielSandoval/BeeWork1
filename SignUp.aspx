@@ -13,15 +13,27 @@
         <section class="form-login">
             <h5>Registrarse</h5>
             <div style="height: auto">
-
+                <asp:TextBox ID="txtNombre" runat="server" class="controls" name="Nombre" placeholder="Nombre"></asp:TextBox>
+                <asp:TextBox ID="txtApellido" runat="server" class="controls" name="Apellido" placeholder="Apellido"></asp:TextBox>
+                <asp:TextBox ID="txtCorreo" runat="server" class="controls" name="Correo" placeholder="Correo"></asp:TextBox>
+                <asp:TextBox ID="txtUsuario" runat="server" class="controls" name="Usuario" placeholder="Usuario"></asp:TextBox>
+                <asp:TextBox ID="txtContraseña" type="password" runat="server" class="controls" name="password" placeholder="Contraseña"></asp:TextBox>
+                <p><asp:Label ID="lblError" CssClass="lblError" runat="server" ></asp:Label></p>
+                <asp:Button ID="btnRegistrarse" runat="server" Text="Registrarse" type="submit" class="buttons" OnClick="btnRegistrarse_Click"/>
+                <p><a href="Login.aspx">¿Ya tienes cuenta? Inicia Sesión</a></p>
             </div>
-            <input type="text" id="Nombre" class="controls" name="Nombre" placeholder="Nombre"/>
+
+            
+
+
+
+            <%--<input type="text" id="Nombre" class="controls" name="Nombre" placeholder="Nombre"/>
             <input type="text" id="Apellido" class="controls" name="Apellido" placeholder="Apellido"/>
             <input type="text" id="Correo" class="controls" name="Correo" placeholder="Correo"/>
             <input type="text" id="User" class="controls" name="Usuario" placeholder="Usuario"/>
             <input type="password" id="password" class="controls" name="password" placeholder="Contraseña"/>
             <input type="submit" class="buttons" value="Registrarse"/>
-            <p><a href="Login.aspx">¿Ya tienes cuenta? Inicia Sesión</a></p>
+            <p><a href="Login.aspx">¿Ya tienes cuenta? Inicia Sesión</a></p>--%>
     </section>
     </form>
 </body>

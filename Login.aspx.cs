@@ -16,7 +16,7 @@ namespace BeeWork
         {
 
         }
-
+        string rbtn;
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
             string conectar = ConfigurationManager.ConnectionStrings["conexion"].ConnectionString;
@@ -31,30 +31,19 @@ namespace BeeWork
             if (rbtnAdmin.Checked == true)
             {
                 cmd.Parameters.Add("@TipoUsuario", SqlDbType.VarChar, 20).Value = rbtnAdmin.Text;
+                rbtn = rbtnAdmin.Text;
             }
             else
             {
                 cmd.Parameters.Add("@TipoUsuario", SqlDbType.VarChar, 20).Value = rbtnUser.Text;
+                rbtn = rbtnUser.Text;
             }
             using (SqlDataReader dr = cmd.ExecuteReader())
             {
                 if (dr.Read())
                 {
-                    if (rbtnAdmin.Text == "Administrador")
-                    {
-                        Response.Redirect("IndexAdmin.aspx");
-                        //Response.Redirect("Index.aspx");
-
-                    }
-                    else
-                    {
-                        if (rbtnUser.Text == "Usuario")
-                        {
-                            Response.Redirect("Index.aspx");
-                            //Response.Redirect("IndexAdmin.aspx");
-                        }
-
-                    }
+                    Session["usuariologueado"] = rbtn;
+                    Response.Redirect("Index.aspx");
                 }
                 else
                 {

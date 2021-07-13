@@ -44,6 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -68,9 +69,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Index.aspx" />
-    <Content Include="IndexAdmin.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="public\img\img.jpg" />
+    <Content Include="public\style\index.css" />
     <Content Include="public\style\login.css" />
     <Content Include="public\style\signUp.css" />
     <Content Include="SignUp.aspx" />
@@ -83,13 +84,6 @@
     </Compile>
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="IndexAdmin.aspx.cs">
-      <DependentUpon>IndexAdmin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="IndexAdmin.aspx.designer.cs">
-      <DependentUpon>IndexAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
