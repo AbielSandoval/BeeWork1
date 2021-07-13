@@ -28,6 +28,24 @@ body {
     margin-bottom: auto;
 }
 
+img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-login h1 {
+    font-family: Arial;
+    color: #E7D51A;
+    font-size: 45px;
+    text-align: center;
+}
+
 .form-login h5 {
     margin: 0;
     text-align: center;

@@ -73,6 +73,7 @@
     <Content Include="public\img\img.jpg" />
     <Content Include="public\img\img1.jpg" />
     <Content Include="public\img\img2.jpg" />
+    <Content Include="public\img\Logo1.jpg" />
     <Content Include="public\style\index.css" />
     <Content Include="public\style\login.css" />
     <Content Include="public\style\signUp.css" />

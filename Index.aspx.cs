@@ -17,11 +17,14 @@ namespace BeeWork
             if (Session["usuariologueado"] != null)
             {
                 string usuariologueado = Session["usuariologueado"].ToString();
-                lblTUsuario.Text = "Bienvenido " + usuariologueado;
+                //lblTUsuario.Text = "Bienvenido " + usuariologueado;
                 if(usuariologueado == "Administrador")
                 {
-                    //Primero debo poner todos los li como botones o eso creo (veré un video para confirmar)
-                    //Aqui pondre de que el btn de Eliminar empleo sea visible
+                    EliminarEmpleo.Visible = true;
+                }
+                else
+                {
+                    EliminarEmpleo.Visible = false;
                 }
             }
             else
@@ -36,4 +39,4 @@ namespace BeeWork
             Response.Redirect("Login.aspx");
         }
     }
-}
+} 

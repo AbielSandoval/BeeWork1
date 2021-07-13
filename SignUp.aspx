@@ -11,6 +11,10 @@
 <body>
     <form id="form1" runat="server">
         <section class="form-login">
+            <h1>Bee Work</h1>
+            <div class="logo">
+                <img src="https://agenciakrakendigital.com/casadelasabejas/wp-content/uploads/2019/06/Casa-de-las-Abejas-miel-en-Quito-388x456.png" alt="Avatar" />
+            </div>
             <h5>Registrarse</h5>
             <div style="height: auto">
                 <asp:TextBox ID="txtNombre" runat="server" class="controls" name="Nombre" placeholder="Nombre"></asp:TextBox>
