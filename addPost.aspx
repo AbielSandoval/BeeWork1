@@ -37,7 +37,8 @@
                 <asp:TextBox ID="txtDescripcion" runat="server" class="controls" name="Descripcion" placeholder="Descripcion"></asp:TextBox>
                 <asp:TextBox ID="txtComoAplicar" runat="server" class="controls" name="ComoAplicar" placeholder="ComoAplicar"></asp:TextBox>
                 <asp:TextBox ID="txtEmail" runat="server" class="controls" name="Email" placeholder="Email"></asp:TextBox>
-                <asp:Button ID="btnAgregar" runat="server" Text="Agregar" type="submit" class="buttons" />
+                <p><asp:Label ID="lblError" CssClass="lblError" runat="server" ></asp:Label></p>
+                <asp:Button ID="btnAgregar" runat="server" Text="Agregar" type="submit" class="buttons" OnClick="btnAgregar_Click" />
 
             </div>
             <%--<input type="text" id="Company" class="controls" name="Company" placeholder="Company">

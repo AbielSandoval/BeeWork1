@@ -153,7 +153,11 @@ img {
     margin-bottom: 16px;
 }
 
-
+.form-addPost p {
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid;
+}
 
 .form-addPost a {
     color: white;
