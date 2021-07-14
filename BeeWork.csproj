@@ -74,6 +74,7 @@
     <Content Include="public\img\img.jpg" />
     <Content Include="public\img\img1.jpg" />
     <Content Include="public\img\img2.jpg" />
+    <Content Include="public\img\img3.jpg" />
     <Content Include="public\img\Logo1.jpg" />
     <Content Include="public\style\addPost.css" />
     <Content Include="public\style\index.css" />
