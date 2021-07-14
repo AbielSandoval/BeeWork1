@@ -21,7 +21,7 @@
                     <li><a href="Index.aspx">Inicio</a></li>
                     <li><a href="#">Acerca</a></li>
                     <li><a href="addPost.aspx">Agregar Empleo</a></li>
-                    <li id="EliminarEmpleo" runat="server"><a href="#">Eliminar Empleo</a></li>
+                    <li id="EliminarEmpleo" runat="server"><a href="deletePost.aspx">Eliminar Empleo</a></li>
                     <asp:Button ID="btnCerrarSesion" runat="server" CssClass="btnCerrarSesion" Text="Cerrar Sesion" OnClick="btnCerrarSesion_Click" />
                 </ul>
             </nav>

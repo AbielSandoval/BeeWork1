@@ -19,7 +19,7 @@
             <ul>
                 <li><a href="index.aspx">Inicio</a></li>
                 <li><a href="#">Acerca</a></li>
-                <li id="EliminarEmpleo" runat="server"><a href="#">Eliminar Empleo</a></li>
+                <li id="EliminarEmpleo" runat="server"><a href="deletePost.aspx">Eliminar Empleo</a></li>
                 <asp:Button ID="btnCerrarSesion" runat="server" CssClass="btnCerrarSesion" Text="Cerrar Sesion" OnClick="btnCerrarSesion_Click" />
             </ul>
         </nav>
@@ -27,6 +27,7 @@
     <section class="form-addPost">
             <h5>Agregar Empleo</h5>
             <div style="height: auto">
+                <p><asp:Label ID="Label1" CssClass="lblError" runat="server" ></asp:Label></p>
                 <asp:TextBox ID="txtCompany" runat="server" class="controls" name="Company" placeholder="Company"></asp:TextBox>
                 <asp:TextBox ID="txtLogo" runat="server" class="controls" name="Logo" placeholder="Logo"></asp:TextBox>
                 <asp:TextBox ID="txtDireccionURL" runat="server" class="controls" name="DireccionURL" placeholder="DireccionURL"></asp:TextBox>
