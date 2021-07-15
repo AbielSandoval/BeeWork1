@@ -31,15 +31,18 @@
             <p style="font-family: Arial; margin: 10px 30px 30px 30px; color: white; text-align: left; width: 357px; position: static; top: 248px; left: 991px;" aria-orientation="horizontal">
                 <asp:TextBox ID="txtBuscar" runat="server" TextMode="Search" BorderStyle="None" CssClass="txtBuscar" Height="23px" Width="223px"></asp:TextBox>
 &nbsp;
-                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btnBuscar" Height="26px" Width="79px" />
+                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btnBuscar" Height="26px" Width="79px" OnClick="btnBuscar_Click" />
             </p>
         </div>
 
         <div style="margin: 10px 10px 30px 30px; font-family: 'Baskerville Old Face'; text-align: center;">
-            <asp:GridView ID="gvEmpleos" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" ForeColor="#333333" GridLines="None" Height="65px" Width="1175px" DataSourceID="SqlDataSource1">
+            <asp:GridView ID="gvEmpleos" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" ForeColor="#333333" GridLines="None" Height="65px" Width="1175px" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="gvEmpleos_SelectedIndexChanged">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
+                    <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" InsertVisible="False" ReadOnly="True" />
                     <asp:BoundField DataField="Company" HeaderText="Company" SortExpression="Company" />
+                    <asp:BoundField DataField="Logo" HeaderText="Logo" SortExpression="Logo" />
+                    <asp:BoundField DataField="DireccionURL" HeaderText="DireccionURL" SortExpression="DireccionURL" />
                     <asp:BoundField DataField="Posicion" HeaderText="Posicion" SortExpression="Posicion" />
                     <asp:BoundField DataField="Ubicacion" HeaderText="Ubicacion" SortExpression="Ubicacion" />
                     <asp:BoundField DataField="Categoria" HeaderText="Categoria" SortExpression="Categoria" />

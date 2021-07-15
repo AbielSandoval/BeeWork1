@@ -14,6 +14,10 @@ namespace BeeWork
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+
+
+
             if (Session["usuariologueado"] != null)
             {
                 string usuariologueado = Session["usuariologueado"].ToString();
@@ -39,6 +43,16 @@ namespace BeeWork
             Response.Redirect("Login.aspx");
         }
 
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            SqlDataSource1.SelectCommand = "SELECT * FROM [Post] where Categoria LIKE '%" + txtBuscar.Text +"%'" ;
+            SqlDataSource1.DataBind();
 
+        }
+
+        protected void gvEmpleos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 } 
