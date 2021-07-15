@@ -29,8 +29,10 @@
         </header>
         <div>
             <h1 style="font-family: Arial; margin: 10px 30px 30px 30px; color: white; text-align: center;">Empleos</h1>
-            <p style="font-family: Arial; margin: 10px 30px 30px 30px; color: white; text-align: center; width: 372px;">
+            <p style="font-family: Arial; margin: 10px 30px 30px 30px; color: white; text-align: center; width: 414px;">
                 <asp:TextBox ID="TextBox1" runat="server" TextMode="Search"></asp:TextBox>
+&nbsp;
+                <asp:Button ID="Button1" runat="server" Text="Button" />
             </p>
         </div>
         <div style="margin: 10px 10px 30px 30px; text-align: center;">
