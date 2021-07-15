@@ -16,6 +16,23 @@ body{
 
 }
 
+.btnBuscar {
+    border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    background: #017bad;
+    border-radius: 5px;
+    font-family: arial;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+.txtBuscar {
+    background-color: transparent;
+    border-radius: 5px;
+}
+
 .btnCerrarSesion {
     width: 100px;
     height: 40px;

@@ -23,16 +23,15 @@
                     <li><a href="addPost.aspx">Agregar Empleo</a></li>
                     <li id="EliminarEmpleo" runat="server"><a href="deletePost.aspx">Eliminar Empleo</a></li>
                     <asp:Button ID="btnCerrarSesion" runat="server" CssClass="btnCerrarSesion" Text="Cerrar Sesion" OnClick="btnCerrarSesion_Click" />
-                    <li id="EliminarEmpleo" runat="server">
                 </ul>
             </nav>
         </header>
         <div>
             <h1 style="font-family: Arial; margin: 10px 30px 30px 30px; color: white; text-align: center;">Empleos</h1>
-            <p style="font-family: Arial; margin: 10px 30px 30px 30px; color: white; text-align: center; width: 414px;">
-                <asp:TextBox ID="TextBox1" runat="server" TextMode="Search"></asp:TextBox>
+            <p style="font-family: Arial; margin: 10px 30px 30px 30px; color: white; text-align: left; width: 357px; position: static; top: 248px; left: 991px;" aria-orientation="horizontal">
+                <asp:TextBox ID="txtBuscar" runat="server" TextMode="Search" BorderStyle="None" CssClass="txtBuscar" Height="23px" Width="223px"></asp:TextBox>
 &nbsp;
-                <asp:Button ID="Button1" runat="server" Text="Button" />
+                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btnBuscar" Height="26px" Width="79px" />
             </p>
         </div>
 
