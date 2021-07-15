@@ -40,10 +40,7 @@
             <asp:GridView ID="gvEmpleos" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" ForeColor="#333333" GridLines="None" Height="65px" Width="1175px" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="gvEmpleos_SelectedIndexChanged">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
-                    <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" InsertVisible="False" ReadOnly="True" />
                     <asp:BoundField DataField="Company" HeaderText="Company" SortExpression="Company" />
-                    <asp:BoundField DataField="Logo" HeaderText="Logo" SortExpression="Logo" />
-                    <asp:BoundField DataField="DireccionURL" HeaderText="DireccionURL" SortExpression="DireccionURL" />
                     <asp:BoundField DataField="Posicion" HeaderText="Posicion" SortExpression="Posicion" />
                     <asp:BoundField DataField="Ubicacion" HeaderText="Ubicacion" SortExpression="Ubicacion" />
                     <asp:BoundField DataField="Categoria" HeaderText="Categoria" SortExpression="Categoria" />
