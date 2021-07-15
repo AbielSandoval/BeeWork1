@@ -76,6 +76,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Acerca.aspx" />
     <Content Include="addPost.aspx" />
     <Content Include="deletePost.aspx" />
     <Content Include="Index.aspx" />
@@ -84,6 +85,7 @@
     <Content Include="public\img\img1.jpg" />
     <Content Include="public\img\img2.jpg" />
     <Content Include="public\img\Logo1.jpg" />
+    <Content Include="public\style\acerca.css" />
     <Content Include="public\style\addPost.css" />
     <Content Include="public\style\deletePost.css" />
     <Content Include="public\style\index.css" />
@@ -93,6 +95,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Acerca.aspx.cs">
+      <DependentUpon>Acerca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Acerca.aspx.designer.cs">
+      <DependentUpon>Acerca.aspx</DependentUpon>
+    </Compile>
     <Compile Include="addPost.aspx.cs">
       <DependentUpon>addPost.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
