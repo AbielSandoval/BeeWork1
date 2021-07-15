@@ -23,11 +23,15 @@
                     <li><a href="addPost.aspx">Agregar Empleo</a></li>
                     <li id="EliminarEmpleo" runat="server"><a href="deletePost.aspx">Eliminar Empleo</a></li>
                     <asp:Button ID="btnCerrarSesion" runat="server" CssClass="btnCerrarSesion" Text="Cerrar Sesion" OnClick="btnCerrarSesion_Click" />
+                    <li id="EliminarEmpleo" runat="server">
                 </ul>
             </nav>
         </header>
         <div>
             <h1 style="font-family: Arial; margin: 10px 30px 30px 30px; color: white; text-align: center;">Empleos</h1>
+            <p style="font-family: Arial; margin: 10px 30px 30px 30px; color: white; text-align: center; width: 372px;">
+                <asp:TextBox ID="TextBox1" runat="server" TextMode="Search"></asp:TextBox>
+            </p>
         </div>
         <div style="margin: 10px 10px 30px 30px; text-align: center;">
             <asp:GridView ID="gvEmpleos" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Height="65px" Width="1175px">
