@@ -26,6 +26,35 @@
                 </ul>
             </nav>
         </header>
+        <div>
+            <h1 style="font-family: Arial; margin: 10px 30px 30px 30px; color: white; text-align: center;">Empleos</h1>
+        </div>
+        <div style="margin: 10px 10px 30px 30px; text-align: center;">
+            <asp:GridView ID="gvEmpleos" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Height="65px" Width="1175px">
+                <AlternatingRowStyle BackColor="White" />
+                <Columns>
+                    <asp:BoundField DataField="Company" HeaderText="Company" SortExpression="Company" />
+                    <asp:BoundField DataField="Posicion" HeaderText="Posicion" SortExpression="Posicion" />
+                    <asp:BoundField DataField="Ubicacion" HeaderText="Ubicacion" SortExpression="Ubicacion" />
+                    <asp:BoundField DataField="Categoria" HeaderText="Categoria" SortExpression="Categoria" />
+                    <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
+                    <asp:BoundField DataField="ComoAplicar" HeaderText="ComoAplicar" SortExpression="ComoAplicar" />
+                    <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+                </Columns>
+                <EditRowStyle BackColor="#2461BF" />
+                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="#EFF3FB" />
+                <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                <SortedDescendingHeaderStyle BackColor="#4870BE" />
+            </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_a7736e_beeworkConnectionString %>" SelectCommand="SELECT * FROM [Post]"></asp:SqlDataSource>
+        </div>
+        
     </form>
 </body>
 </html>

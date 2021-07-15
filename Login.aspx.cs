@@ -47,7 +47,7 @@ namespace BeeWork
                 }
                 else
                 {
-                    lblError.Text = "Usuario o Contraseña  incorrecta ";
+                    lblError.Text = "Usuario, Contraseña o Tipo de usuario  incorrecto ";
 
                 }
 

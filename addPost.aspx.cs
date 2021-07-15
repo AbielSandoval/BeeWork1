@@ -98,11 +98,12 @@ namespace BeeWork
                                         if (dr.Read())
                                         {
                                             lblError.Text = "Ops ha ocurrido un error";
+                                            lblError1.Text = "Ops ha ocurrido un error";
                                         }
                                         else
                                         {
                                             lblError.Text = "Empleo creado exitosamente!!!";
-
+                                            lblError1.Text = "Empleo creado exitosamente!!!";
                                         }
                                     }
                                 }

@@ -21,7 +21,7 @@
                 <asp:TextBox ID="txtPassword" type="password" runat="server" class="controls" name="password" placeholder="Contraseña"></asp:TextBox>
                 <asp:RadioButton ID="rbtnAdmin" runat="server" CssClass="rbtn" Text="Administrador" GroupName="TipoUsuario" />
                 <asp:RadioButton ID="rbtnUser" runat="server" CssClass="rbtn" Text="Usuario" Checked="True" GroupName="TipoUsuario" />
-                <p><asp:Label ID="lblError" CssClass="lblError" runat="server" ></asp:Label></p> 
+                <p style="border-style: none; margin: 10px; text-decoration: none;"><asp:Label ID="lblError" CssClass="lblError" runat="server" ></asp:Label></p> 
                 <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" type="submit" class="buttons" OnClick="btnIngresar_Click" />
                 <p><a href="SignUp.aspx">¿No tienes cuenta? Registrate</a></p>
             </div>
