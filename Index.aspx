@@ -35,6 +35,7 @@
                 <asp:Button ID="Button1" runat="server" Text="Button" />
             </p>
         </div>
+
         <div style="margin: 10px 10px 30px 30px; font-family: 'Baskerville Old Face'; text-align: center;">
             <asp:GridView ID="gvEmpleos" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" ForeColor="#333333" GridLines="None" Height="65px" Width="1175px" DataSourceID="SqlDataSource1">
                 <AlternatingRowStyle BackColor="White" />
