@@ -29,8 +29,10 @@ body{
 }
 
 .txtBuscar {
-    background-color: transparent;
+    font-family: Arial;
+    color: black;
     border-radius: 5px;
+    border-color: inherit;
 }
 
 .btnCerrarSesion {
