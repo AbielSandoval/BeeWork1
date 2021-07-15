@@ -28,6 +28,7 @@
         </header>
         <div>
             <h1 style="font-family: Arial; margin: 10px 30px 30px 30px; color: white; text-align: center;">Empleos</h1>
+            <p style="font-family: Arial; margin: 0px; color: white; text-align: center; width: 310px; font-size: 22px;">Buscar Por Categoria</p>
             <p style="font-family: Arial; margin: 10px 30px 30px 30px; color: white; text-align: left; width: 357px; position: static; top: 248px; left: 991px;" aria-orientation="horizontal">
                 <asp:TextBox ID="txtBuscar" runat="server" TextMode="Search" BorderStyle="None" CssClass="txtBuscar" Height="23px" Width="223px"></asp:TextBox>
 &nbsp;
