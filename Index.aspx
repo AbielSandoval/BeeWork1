@@ -29,6 +29,7 @@
         <div>
             <h1 style="font-family: Arial; margin: 10px 30px 30px 30px; color: white; text-align: center;">Empleos</h1>
         </div>
+
         <div style="margin: 10px 10px 30px 30px; font-family: 'Baskerville Old Face'; text-align: center;">
             <asp:GridView ID="gvEmpleos" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ID" ForeColor="#333333" GridLines="None" Height="65px" Width="1175px" DataSourceID="SqlDataSource1">
                 <AlternatingRowStyle BackColor="White" />
