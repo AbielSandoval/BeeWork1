@@ -38,5 +38,7 @@ namespace BeeWork
             Session.Remove("usuariologueado");
             Response.Redirect("Login.aspx");
         }
+
+
     }
 } 
